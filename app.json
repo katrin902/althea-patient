@@ -1,0 +1,32 @@
+{
+  "expo": {
+    "name": "Althea",
+    "slug": "althea-patient",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "althea",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.althea.patient"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#FAF5ED"
+      },
+      "package": "com.althea.patient"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      "expo-status-bar"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
