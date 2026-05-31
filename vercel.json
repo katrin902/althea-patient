@@ -1,17 +1,17 @@
 {
-  "buildCommand": "npm run build",
+  "buildCommand": "npx expo export --platform web",
   "outputDirectory": "dist",
   "installCommand": "npm install",
   "framework": null,
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/:path*",
       "destination": "/index.html"
     }
   ],
   "headers": [
     {
-      "source": "/_expo/static/(.*)",
+      "source": "/_expo/static/:path*",
       "headers": [
         {
           "key": "Cache-Control",
@@ -20,7 +20,7 @@
       ]
     },
     {
-      "source": "/assets/(.*)",
+      "source": "/assets/:path*",
       "headers": [
         {
           "key": "Cache-Control",
@@ -29,7 +29,7 @@
       ]
     },
     {
-      "source": "/(.*)",
+      "source": "/:path*",
       "headers": [
         {
           "key": "Content-Security-Policy",
