@@ -18,7 +18,13 @@
     },
     "web": {
       "bundler": "metro",
-      "output": "single"
+      "output": "single",
+      "name": "Althea",
+      "shortName": "Althea",
+      "description": "Your first step toward feeling better.",
+      "lang": "en",
+      "themeColor": "#3AABF0",
+      "backgroundColor": "#FAF5ED"
     },
     "plugins": [
       "expo-router",
