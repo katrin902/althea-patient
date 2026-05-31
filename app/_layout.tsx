@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { View } from 'react-native';
+import { Platform, StyleSheet, View, useWindowDimensions } from 'react-native';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { AppProvider, useApp } from '../context/AppContext';
@@ -8,13 +8,57 @@ import { colors } from '../constants/theme';
 
 function SafeWrapper({ children }: { children: ReactNode }) {
   const { state } = useApp();
-  return (
-    <View style={{ flex: 1 }}>
+  const { width, height } = useWindowDimensions();
+
+  // On desktop browsers: render the app centred inside a phone-shaped frame.
+  // On real phones (width ≤ 430 px CSS px) or native: full-screen as usual.
+  const isDesktop = Platform.OS === 'web' && width > 430;
+
+  const appContent = (
+    <>
       {children}
       {state.isAuthenticated && <EmergencyButton />}
+    </>
+  );
+
+  if (!isDesktop) {
+    return <View style={{ flex: 1 }}>{appContent}</View>;
+  }
+
+  return (
+    <View style={desktop.bg}>
+      <View
+        style={[
+          desktop.frame,
+          // Cap frame height to the actual viewport so nothing is clipped
+          { height: Math.min(844, height) } as any,
+          // boxShadow is a valid React Native Web style property
+          {
+            boxShadow:
+              '0 0 0 10px #22223a, 0 0 0 11px #2e2e50, 0 40px 100px rgba(0,0,0,0.7)',
+          } as any,
+        ]}
+      >
+        {appContent}
+      </View>
     </View>
   );
 }
+
+const desktop = StyleSheet.create({
+  bg: {
+    flex: 1,
+    backgroundColor: '#12121f',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  frame: {
+    width: 390,
+    // height is set dynamically above (min of 844 and viewport height)
+    borderRadius: 44,
+    overflow: 'hidden',
+  },
+});
 
 export default function RootLayout() {
   return (
