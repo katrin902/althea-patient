@@ -220,10 +220,7 @@ export default function AIIntakeScreen() {
           {isDone && (
             <TouchableOpacity
               style={styles.ctaBtn}
-              onPress={() => {
-                dispatch({ type: 'SET_AUTHENTICATED', payload: true });
-                router.push('/providers' as any);
-              }}
+              onPress={() => router.push('/providers' as any)}
               activeOpacity={0.85}
             >
               <Text style={styles.ctaText}>Choose a provider now →</Text>
