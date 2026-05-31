@@ -38,7 +38,7 @@ export default function WelcomeScreen() {
           </Text>
         </View>
 
-        <TouchableOpacity style={styles.startCard} onPress={() => router.push('/crisis-disclaimer')} activeOpacity={0.85}>
+        <TouchableOpacity style={styles.startCard} onPress={() => router.push('/ai-intake')} activeOpacity={0.85}>
           <View style={styles.startIcon}>
             <Text style={styles.startIconText}>💬</Text>
           </View>
@@ -50,7 +50,7 @@ export default function WelcomeScreen() {
 
         <Button
           label="Start my assessment"
-          onPress={() => router.push('/crisis-disclaimer')}
+          onPress={() => router.push('/ai-intake')}
           style={styles.cta}
         />
 

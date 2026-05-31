@@ -70,6 +70,7 @@ export default function RootLayout() {
           }}
         >
           <Stack.Screen name="index" options={{ headerShown: false }} />
+          <Stack.Screen name="ai-intake" options={{ headerShown: false }} />
           <Stack.Screen name="crisis-disclaimer" options={{ title: '', headerBackTitle: 'Back' }} />
           <Stack.Screen name="auth" options={{ title: 'Create account' }} />
           <Stack.Screen name="personal-details" options={{ title: 'Personal details' }} />
