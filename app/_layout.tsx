@@ -30,13 +30,7 @@ function SafeWrapper({ children }: { children: ReactNode }) {
       <View
         style={[
           desktop.frame,
-          // Cap frame height to the actual viewport so nothing is clipped
-          { height: Math.min(844, height) } as any,
-          // boxShadow is a valid React Native Web style property
-          {
-            boxShadow:
-              '0 0 0 10px #22223a, 0 0 0 11px #2e2e50, 0 40px 100px rgba(0,0,0,0.7)',
-          } as any,
+          { boxShadow: '0 0 60px rgba(0,0,0,0.6)' } as any,
         ]}
       >
         {appContent}
@@ -54,9 +48,9 @@ const desktop = StyleSheet.create({
   },
   frame: {
     width: 390,
-    // height is set dynamically above (min of 844 and viewport height)
-    borderRadius: 44,
+    flex: 1,          // fills the full viewport height — nothing clipped
     overflow: 'hidden',
+    // no borderRadius — sharp edges as requested
   },
 });
 
