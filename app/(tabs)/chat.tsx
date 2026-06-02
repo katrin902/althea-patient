@@ -21,7 +21,7 @@ const initialMessages: Message[] = [
     id: 'm0',
     role: 'assistant',
     content:
-      "Hello. I'm Althea, your support assistant. I'm here to help you while you wait for your appointment.\n\nI can help you with coping strategies, preparation for your appointment, or just talk through how you're feeling. What's on your mind?",
+      "Hello. I'm AltHea, your support assistant. I'm here to help you while you wait for your appointment.\n\nI can help you with coping strategies, preparation for your appointment, or just talk through how you're feeling. What's on your mind?",
   },
 ];
 
@@ -79,7 +79,7 @@ export default function ChatScreen() {
           <AltheaAvatar size={38} />
         </View>
         <View style={{ flex: 1 }}>
-          <Text style={styles.chatHeaderName}>Althea</Text>
+          <Text style={styles.chatHeaderName}>AltHea</Text>
           <View style={styles.onlineRow}>
             <View style={styles.onlineDot} />
             <Text style={styles.onlineText}>AI Support · Available 24/7</Text>

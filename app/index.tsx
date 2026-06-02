@@ -27,7 +27,7 @@ export default function WelcomeScreen() {
     <SafeAreaView style={styles.safe}>
       <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
         <View style={styles.header}>
-          <Text style={styles.logo}>Althea</Text>
+          <Text style={styles.logo}>AltHea</Text>
         </View>
 
         <View style={styles.hero}>

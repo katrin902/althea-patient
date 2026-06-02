@@ -46,7 +46,7 @@ export default function TabLayout() {
         name="chat"
         options={{
           title: 'Chat',
-          headerTitle: 'Althea Chat',
+          headerTitle: 'AltHea Chat',
           tabBarIcon: ({ focused }) => <TabIcon emoji="💬" focused={focused} />,
         }}
       />

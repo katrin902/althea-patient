@@ -95,7 +95,7 @@ export default function IntakeChatScreen() {
                 <AltheaAvatar size={34} />
               </View>
               <View>
-                <Text style={styles.headerTitle}>Althea</Text>
+                <Text style={styles.headerTitle}>AltHea</Text>
                 <Text style={styles.headerSub}>Intake questionnaire</Text>
               </View>
             </View>

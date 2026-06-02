@@ -22,7 +22,7 @@ interface Message {
 // ─── Script ───────────────────────────────────────────────────────────────────
 
 const INTRO =
-  "Hi 👋 I'm Althea, your AI support assistant.\n\nI'll ask you 3 short questions to help us find the right support for you. This only takes a minute.";
+  "Hi 👋 I'm AltHea, your AI support assistant.\n\nI'll ask you 3 short questions to help us find the right support for you. This only takes a minute.";
 
 const Q1 = 'What is your main concern right now?';
 
@@ -154,7 +154,7 @@ export default function AIIntakeScreen() {
             <AltheaAvatar size={34} />
           </View>
           <View>
-            <Text style={styles.headerName}>Althea</Text>
+            <Text style={styles.headerName}>AltHea</Text>
             <Text style={styles.headerSub}>Initial assessment · 3 questions</Text>
           </View>
         </View>

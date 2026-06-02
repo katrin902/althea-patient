@@ -516,7 +516,7 @@ export default function HomeScreen() {
               <AltheaAvatar size={36} />
             </View>
             <View style={{ flex: 1 }}>
-              <Text style={styles.chatCardTitle}>Chat with Althea</Text>
+              <Text style={styles.chatCardTitle}>Chat with AltHea</Text>
               <Text style={styles.chatCardSub}>Ask anything · Available 24/7 · Confidential</Text>
             </View>
           </View>
